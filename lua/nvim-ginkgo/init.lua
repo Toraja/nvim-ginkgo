@@ -51,7 +51,7 @@ function adapter.discover_positions(file_path)
     ; -- Namespaces --
     ; Matches: `describe('subject')` and `context('case')`
     ((call_expression
-      function: (identifier) @func_name (#any-of? @func_name "Describe" "Context" "DescribeTable")
+      function: (identifier) @func_name (#any-of? @func_name "Describe" "Context" "When" "DescribeTable")
       arguments: (argument_list ((interpreted_string_literal) @namespace.name))
     )) @namespace.definition
 
